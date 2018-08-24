@@ -16,3 +16,9 @@ print('Loading successfully! There are', len(data), 'messages !!!')
 #print(data[1])
 #print('--------')
 #print(data[2])
+sum_length = 0
+for d in data:
+	sum_length += len(d)
+print('Total length of the messages is', sum_length)
+print('The average length of the messages is', sum_length/len(data))
+
