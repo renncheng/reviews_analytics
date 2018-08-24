@@ -35,3 +35,6 @@ for e in data:
 print('There are', len(new), 'messages length samller than 100. ')
 print('Ther are', len(good), 'messages mentioned "good"')
 print('Ther are', len(bad), 'messages mentioned "bad"')
+
+# list comprehension!!!!
+#good = [d for d in data if 'good' in d]
