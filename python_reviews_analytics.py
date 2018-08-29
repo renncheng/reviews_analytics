@@ -16,6 +16,31 @@ print('Loading successfully! There are', len(data), 'messages !!!')
 #print(data[1])
 #print('--------')
 #print(data[2])
+
+w_c = {}
+for d in data:
+	words = d.split()
+	for word in words:
+		if word in w_c:
+			w_c[word] += 1 # Count number
+		else:
+			w_c[word] = 1 # Add a key in dictionary
+for word in w_c:
+	if w_c[word] > 100:
+		print(word, w_c[word])
+print('總共有', len(w_c), '個字')
+
+while True:
+	word = input('What word you want to search?')
+	if word == 'q':
+		break
+	if word in w_c:
+		print(word, '出現的次數為：', w_c[word])
+	else:
+		print('This word didnot exist.')
+print('Thanks for using.')
+
+
 sum_length = 0
 for d in data:
 	sum_length += len(d)
