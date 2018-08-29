@@ -1,5 +1,5 @@
 # python reviews-analytics
-
+import time
 
 data = []
 count = 0
@@ -17,6 +17,8 @@ print('Loading successfully! There are', len(data), 'messages !!!')
 #print('--------')
 #print(data[2])
 
+# words count
+start_time = time.time()
 w_c = {}
 for d in data:
 	words = d.split()
@@ -39,7 +41,8 @@ while True:
 	else:
 		print('This word didnot exist.')
 print('Thanks for using.')
-
+end_time = time.time()
+print('It costs', end_time - start_time, 'seconds')
 
 sum_length = 0
 for d in data:
